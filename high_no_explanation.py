@@ -916,6 +916,9 @@ def generate_multiple_designs(design_prompt, count=1):
     return designs
 
 def show_high_recommendation_without_explanation():
+    # 确保design_count已初始化，防止AttributeError
+    if 'design_count' not in st.session_state:
+        st.session_state.design_count = get_random_design_count()
     st.title("👕 AI Recommendation Experiment Platform")
     st.markdown("### Study1-Let AI Design Your T-shirt")
     
