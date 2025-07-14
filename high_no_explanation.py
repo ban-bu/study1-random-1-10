@@ -1065,7 +1065,7 @@ def show_high_recommendation_without_explanation():
         
         # 关键词输入框
         keywords = st.text_input("Enter keywords for your design", value=st.session_state.keywords, 
-                              placeholder="e.g., casual, nature, blue", key="input_keywords")
+                              placeholder="please only input one word", key="input_keywords")
         
         # 随机生成设计按钮（集成了生成功能）
         generate_button = st.button("🎲 Randomize & Generate Designs", key="randomize_and_generate", use_container_width=True)
